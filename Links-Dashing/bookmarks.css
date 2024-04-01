@@ -5,11 +5,58 @@
 }
 
 body {
-    padding: 8px;
     background: url(./images/background-image.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+
+#body {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+#aside {
+    width: 200px;
+}
+
+#main {
+    width: 1200px;
+    max-width: 100%;
+    align-content: center;
+}
+
+#beside {
+    width: 200px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+#footer a:hover {
+    color: #999;
+    text-decoration: underline;
 }
 
 a {
@@ -21,7 +68,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
+    transform: scale(1.2);
 }
 
 .link-item {

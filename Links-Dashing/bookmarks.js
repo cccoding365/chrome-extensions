@@ -4,11 +4,11 @@ chrome.runtime.sendMessage({ action: "getBookmarks" }, (response) => {
     var bookmarksList = document.createElement("div");
     bookmarksList.className = 'link-list';
     response.bookmarks
-        .slice(0, 72)
+        .slice(0, 36)
         .forEach((bookmark) => {
             bookmarksList.appendChild(createLinkItem(bookmark));
         });
-    document.body.appendChild(bookmarksList);
+    document.getElementById("main").appendChild(bookmarksList);
 });
 
 const createLinkItem = (bookmark) => {
