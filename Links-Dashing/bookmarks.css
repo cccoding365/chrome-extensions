@@ -6,6 +6,10 @@
 
 body {
     padding: 8px;
+    background: url(./images/background-image.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 a {
@@ -13,28 +17,37 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
+.link-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
 }
 
-ul li {
-    flex-grow: 1;
-    border: 1px solid #000;
-    padding: 5px 10px;
-    font-weight: bold;
-    width: 300px;
-    height: 50px;
+.link-item {
+    width: 100px;
+    height: 100px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
+    overflow: hidden;
+    color: white;
 }
 
-ul li a {
-    width: 100%;
+.link-item .link-item_icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+}
+
+.link-item .link-item_title {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
