@@ -14,12 +14,12 @@ chrome.runtime.sendMessage({ action: "getBookmarks" }, (response) => {
 const createLinkItem = (bookmark) => {
     const container = document.createElement('div');
     container.innerHTML = `
-        <a href="${bookmark.url}" class="link-item" target="_blank">
+        <a href="${bookmark.url}" class="link-item" target="_blank" title="${bookmark.title}">
             <div class="link-item_icon" style="background-color:${getColorByDomain(bookmark.url)};" >
                 ${bookmark.title.charAt(0)}
             </div>
             <div class="link-item_title">
-                ${bookmark.title}
+                ${bookmark.title.slice(0, 10)}
             </div>
         </a>
     `;

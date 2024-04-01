@@ -81,6 +81,11 @@ a {
     align-items: center;
     overflow: hidden;
     color: white;
+    transition: all .25s;
+}
+
+.link-item:hover {
+    transform: translateY(-10px);
 }
 
 .link-item .link-item_icon {
