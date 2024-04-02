@@ -4,7 +4,7 @@ chrome.runtime.sendMessage({ action: "getBookmarks" }, (response) => {
     var bookmarksList = document.createElement("div");
     bookmarksList.className = 'link-list';
     response.bookmarks
-        .slice(0, 36)
+        .slice(0, 32)
         .forEach((bookmark) => {
             bookmarksList.appendChild(createLinkItem(bookmark));
         });
@@ -19,7 +19,7 @@ const createLinkItem = (bookmark) => {
                 ${bookmark.title.charAt(0).toUpperCase()}
             </div>
             <div class="link-item_title">
-                ${bookmark.title.slice(0, 10)}
+                ${bookmark.title}
             </div>
         </a>
     `;

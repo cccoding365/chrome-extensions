@@ -33,6 +33,7 @@ body {
 
 #aside {
     width: 200px;
+    /* border: 1px solid #fff; */
 }
 
 #main {
@@ -68,13 +69,12 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
-    transform: scale(1.2);
+    gap: 20px;
 }
 
 .link-item {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,19 +88,27 @@ a {
     transform: translateY(-10px);
 }
 
+.link-item:hover .link-item_icon {
+    border-color: #fff;
+}
+
 .link-item .link-item_icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
-    border: 3px solid #ffffff;
+    border: 3px solid #ccc;
+    transition: all .25s;
 }
 
 .link-item .link-item_title {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
