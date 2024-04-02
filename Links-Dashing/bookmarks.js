@@ -16,7 +16,7 @@ const createLinkItem = (bookmark) => {
     container.innerHTML = `
         <a href="${bookmark.url}" class="link-item" target="_blank" title="${bookmark.title}">
             <div class="link-item_icon" style="background-color:${getColorByDomain(bookmark.url)};" >
-                ${bookmark.title.charAt(0)}
+                ${bookmark.title.charAt(0).toUpperCase()}
             </div>
             <div class="link-item_title">
                 ${bookmark.title.slice(0, 10)}
